@@ -1,0 +1,15 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "L'objectif ici est de réaliser un projet basé sur les microservices chaque conteneur(worker) va devoir modifier un fichier et le contenu de ces fichiers sera ensuite affiché dans l'application via le conteneur(webserver).",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
