@@ -9,8 +9,4 @@ RUN npm install
 
 COPY --chown=node:node . .
 
-EXPOSE 8080
-
-VOLUME [ "/data" ]
-
-CMD [ "node", "web.js" ]
+CMD [ "node", "index.js" ]

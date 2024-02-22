@@ -5,7 +5,7 @@ const ejs = require('ejs');
 const fs = require('fs');
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
