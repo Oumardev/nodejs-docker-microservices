@@ -14,8 +14,8 @@ app.set('view engine', 'ejs');
 app.get('/', async (req, res) => {
 
     try {
-        await fs.readFile('./worker1/worker1.txt', 'utf-8', async (err_1, worker_1) => {
-            await fs.readFile('./worker2/worker2.txt', 'utf-8', (err, worker_2) => {
+        await fs.readFile('/app/data/ms-node/worker1.txt', 'utf-8', async (err_1, worker_1) => {
+            await fs.readFile('/app/data/ms-node/worker2.txt', 'utf-8', (err, worker_2) => {
                 const data = { worker_1, worker_2 };
 
                 // Render the HTML page
