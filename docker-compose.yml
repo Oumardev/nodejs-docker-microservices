@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  worker1:
+    build: 
+      context: ./worker1
+    container_name: worker1
+    volumes:
+      - ./worker1:/app
+      - shared:/shared
+
+  worker2:
+    build: 
+      context: ./worker2
+    container_name: worker2
+    volumes:
+      - ./worker2:/app
+      - shared:/shared
+    depends_on:
+      - worker1
+
+  webserver:
+    build: 
+      context: ./webserver
+    container_name: webserver
+    ports:
+      - 80:3002
+    volumes:
+      - ./webserver:/app
+      - shared:/shared
+    depends_on:
+      - worker1
+      - worker2
+
+volumes:
+  shared:
+    driver: local

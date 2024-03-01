@@ -7,7 +7,9 @@
     <title>Node.js HTML Rendering</title>
 </head>
 <body>
-    <p>worker 1 value is, <%= worker_1 %></p>
-    <p>worker 2 value is, <%= worker_2 %></p>
+    <p>worker jobs</p>
+    <% for(var i = 0; i < data.length; i++) { %>
+        <p><%= data[i] %></p>
+    <% } %>
 </body>
 </html>

@@ -1,15 +1,11 @@
-FROM node:10-alpine
+FROM node:20-alpine
 
 WORKDIR /home/node/app
 
-COPY package*.json ./
+COPY . .
 
-RUN chown -R node:node /home/node/app
-
-USER node
+RUN sed -i 's/^ENVIRONNEMENT=.*/ENVIRONNEMENT=prod/' .env
 
 RUN npm install
-
-COPY --chown=node:node . .
 
 CMD [ "node", "index.js" ]
