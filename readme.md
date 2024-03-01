@@ -7,4 +7,4 @@ Worker 2: Incremente de 10 chaque 10 secondes
 
 ## Architecture
 
-![docker_microservices drawio](https://github.com/Oumardev/nodejs-docker-microservices/assets/97165267/5e47d382-d42a-4af7-a630-b80cfd0d31e8)
+![docker_microservices drawio](https://github.com/Oumardev/nodejs-docker-microservices/assets/97165267/1a92e8a7-a5ad-49ea-a87d-23e1a231973c)
